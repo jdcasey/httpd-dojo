@@ -17,3 +17,5 @@ RUN chmod -R o+rx /etc/httpd
 
 ADD cgi/*.py /var/www/cgi-bin/
 RUN chmod +x /var/www/cgi-bin/*.py
+
+CMD ['/usr/bin/httpd -D FOREGROUND']
